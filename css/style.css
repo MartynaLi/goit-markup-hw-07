@@ -58,7 +58,7 @@ img {
 }
 
 /* ================================================= MOBILE ========================================= */
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 428px) and (max-width: 767px)  {
   
 .container {
   width: 428px;
@@ -146,7 +146,6 @@ img {
   text-transform: uppercase;
   color: var(--primary-brand-color);
   text-decoration: none;
-  margin-right: 249px;
 }
 
 .logo-studio {
@@ -241,6 +240,7 @@ img {
 }
 
 .address {
+  display: none;
   font-style: normal;
   margin-left: 332px;
   padding: 24px 0;
@@ -290,13 +290,14 @@ text-align: center;
 }
 
 .header {
+  padding: 22px 0;
   border-bottom: 1px solid var(--accent-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .container-header {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -850,69 +851,9 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 /* MODAL MOBILE */
 
-.mobile-sm-flex {
-  display: flex;
-  gap: 56px;
-}
-
-.mobile-sm-flex-li {
-  flex-basis: calc(100% - 168px) / 4;
-  height: 40px;
-  width: 40px;
-}
-
-.tel-mobile-modal {
-  color: var(--primary-brand-color)
-  font-size: 36px;
-  font-weight: 700px;
-  line-height: 1.11;
-  letter-spacing: 0.06em;
-  text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.email-mobile-modal {
-  color: var(--text-color);
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-}
-
-.mobile-menu {
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
-  margin-bottom: 48px;
-}
-
-.mobile-nav {
-  color: var(--dark-color);
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.11;
-  letter-spacing: 0.06em;
-  text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.mobile-menu-nav {
-  display: flex;
-  flex-direction: column;
-  row-gap: 40px;
-  margin-bottom: 284px;
-}
-
-.mobile-menu-nav-li {
-}
-
-.hamburger {
- 
-}
-
 .modal-hamburger {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
 }
 
 .modal-hamburger-close {
@@ -935,20 +876,83 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   background-color: var(--white-background-color);
 }
-.menu-container-a {
-  overflow-y: auto;
+
+.menu-container {
+  width: 428px;
+  height: 796px;
+  padding: 24px 35px 40px 40px;
+  background-color: var(--white-background-color);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
+
+.js-menu-container {
+  background-color: var(--white-background-color);
+  z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
-  background-color: #fff;
-  z-index: 999;
-  transform: translateY(100%);
+  transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
+.js-menu-container.is-open {
+  transform: translateX(0);
+}
 
+.mobile-nav {
+  color: var(--dark-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  margin-bottom: 284px;
+}
+
+.mobile-menu-address {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-left: 40px;
+}
+
+.tel-mobile {
+  color: var(--primary-brand-color)
+  font-size: 36px;
+  font-weight: 700px;
+  line-height: 1.11;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.email-mobile {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.mobile-sm-flex {
+  display: flex;
+  gap: 56px;
+  margin-top: 48px;
+}
+
+.mobile-sm-flex-li {
+  flex-basis: calc(100% - 168px) / 4;
+  height: 40px;
+  width: 40px;
+}
 }
 
 /* ================================================= TABLET ========================================= */
@@ -957,6 +961,10 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 768px;
 }
 .hamburger {
+  display: none;
+}
+
+.modal-hamburger {
   display: none;
 }
 
@@ -1770,6 +1778,10 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
   
 .hamburger {
+  display: none;
+}
+
+.modal-hamburger {
   display: none;
 }
 
