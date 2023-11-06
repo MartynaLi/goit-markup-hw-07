@@ -420,6 +420,7 @@ text-align: center;
 .customers-flex {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
   row-gap: 72px;
 }
@@ -883,7 +884,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .modal-hamburger-close {
   margin-right: 24px;
-  margin-left: 380px;
+  margin-left: 340px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -959,7 +960,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.72px;
   font-style: normal;
   text-transform: capitalize;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -971,7 +972,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 500;
   line-height: 1.2;
   font-style: normal;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.4px;
 }
 
 .mobile-sm-flex {
@@ -1425,9 +1426,9 @@ margin-bottom: 16px;
 
 .container-footer {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  padding-left: 108px;
 }
 
 .footer-logo-p {
